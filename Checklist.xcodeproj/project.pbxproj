@@ -12,6 +12,8 @@
 		024107A8236ABBD900DAA96F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024107A6236ABBD900DAA96F /* Main.storyboard */; };
 		024107AA236ABBDB00DAA96F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024107A9236ABBDB00DAA96F /* Assets.xcassets */; };
 		024107AD236ABBDB00DAA96F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024107AB236ABBDB00DAA96F /* LaunchScreen.storyboard */; };
+		024107B5236ADB3100DAA96F /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024107B4236ADB3100DAA96F /* AddItemViewController.swift */; };
+		024107B7236B079800DAA96F /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024107B6236B079800DAA96F /* ChecklistItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		024107A9236ABBDB00DAA96F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		024107AC236ABBDB00DAA96F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		024107AE236ABBDB00DAA96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		024107B4236ADB3100DAA96F /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		024107B6236B079800DAA96F /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				024107A9236ABBDB00DAA96F /* Assets.xcassets */,
 				024107AB236ABBDB00DAA96F /* LaunchScreen.storyboard */,
 				024107AE236ABBDB00DAA96F /* Info.plist */,
+				024107B4236ADB3100DAA96F /* AddItemViewController.swift */,
+				024107B6236B079800DAA96F /* ChecklistItem.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			files = (
 				024107A5236ABBD900DAA96F /* ChecklistsViewController.swift in Sources */,
 				024107A3236ABBD900DAA96F /* AppDelegate.swift in Sources */,
+				024107B5236ADB3100DAA96F /* AddItemViewController.swift in Sources */,
+				024107B7236B079800DAA96F /* ChecklistItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
