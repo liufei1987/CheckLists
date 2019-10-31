@@ -14,6 +14,7 @@
 		024107AD236ABBDB00DAA96F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024107AB236ABBDB00DAA96F /* LaunchScreen.storyboard */; };
 		024107B5236ADB3100DAA96F /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024107B4236ADB3100DAA96F /* AddItemViewController.swift */; };
 		024107B7236B079800DAA96F /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024107B6236B079800DAA96F /* ChecklistItem.swift */; };
+		024107B9236B2AE600DAA96F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024107B8236B2AE600DAA96F /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		024107AE236ABBDB00DAA96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024107B4236ADB3100DAA96F /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		024107B6236B079800DAA96F /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		024107B8236B2AE600DAA96F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				024107AE236ABBDB00DAA96F /* Info.plist */,
 				024107B4236ADB3100DAA96F /* AddItemViewController.swift */,
 				024107B6236B079800DAA96F /* ChecklistItem.swift */,
+				024107B8236B2AE600DAA96F /* DataModel.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024107B9236B2AE600DAA96F /* DataModel.swift in Sources */,
 				024107A5236ABBD900DAA96F /* ChecklistsViewController.swift in Sources */,
 				024107A3236ABBD900DAA96F /* AppDelegate.swift in Sources */,
 				024107B5236ADB3100DAA96F /* AddItemViewController.swift in Sources */,
