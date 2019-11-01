@@ -189,14 +189,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" tag="1001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of Checklist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9Q-D7-e9g">
-                                                    <rect key="frame" x="16" y="6" width="328" height="30"/>
+                                                <textField opaque="NO" tag="1001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of Checklist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YY6-6l-EYu">
+                                                    <rect key="frame" x="20" y="6" width="339" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="lKK-kB-Olc" id="BiR-BH-jsB"/>
+                                                        <action selector="done" destination="lKK-kB-Olc" eventType="editingDidEndOnExit" id="zl3-P5-Q67"/>
+                                                        <outlet property="delegate" destination="lKK-kB-Olc" id="wEB-Vr-nGk"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -204,11 +205,32 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="Y6A-Cn-3yN">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="vFR-2p-lPy">
+                                        <rect key="frame" x="0.0" y="115" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vFR-2p-lPy" id="q4y-iL-CGQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHx-2h-ggq">
+                                                    <rect key="frame" x="16" y="11" width="33" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVG-SN-5vt">
+                                                    <rect key="frame" x="312" y="5" width="35" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="lKK-kB-Olc" id="Dn2-ae-pes"/>
-                            <outlet property="delegate" destination="lKK-kB-Olc" id="vnK-X7-nZ6"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Epf-vP-qln">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zlp-M7-9qr">
@@ -224,12 +246,42 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneBarButton" destination="Asl-fn-EDP" id="Jyr-SI-I2A"/>
-                        <outlet property="textField" destination="n9Q-D7-e9g" id="4JD-f5-jbZ"/>
+                        <outlet property="imageView" destination="GVG-SN-5vt" id="ap6-fU-uAd"/>
+                        <outlet property="textField" destination="YY6-6l-EYu" id="VeO-ad-e0X"/>
+                        <segue destination="hk9-6C-W1A" kind="show" identifier="IconPick" id="TQ9-Xt-6jd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKN-F6-m0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3076" y="443.92803598200902"/>
+        </scene>
+        <!--Icon Picker View Controller-->
+        <scene sceneID="pTY-2e-yk1">
+            <objects>
+                <tableViewController id="hk9-6C-W1A" customClass="IconPickerViewController" customModule="Checklist" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tzY-je-gHZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Icon" id="NNK-4Q-LYe">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NNK-4Q-LYe" id="wtl-qY-n7U">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hk9-6C-W1A" id="9Ex-q3-gyB"/>
+                            <outlet property="delegate" destination="hk9-6C-W1A" id="Z9d-Cr-PEz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgp-7d-yUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4065" y="444"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dge-dl-s4C">

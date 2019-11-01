@@ -96,6 +96,7 @@ class ChecklistsViewController: UITableViewController, AddItemViewControllerDele
         let checkedLabel = cell.viewWithTag(1002) as! UILabel
         label.text = item.name
         checkedLabel.text = item.checked ? "√" : ""
+        checkedLabel.textColor = view.tintColor
     }
 
 }
