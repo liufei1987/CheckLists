@@ -11,17 +11,17 @@ class DataModel: NSObject {
     
     
 
-    public func loadChecklistItems() -> [ChecklistItem] {
+    public func loadChecklistItems() -> [Checklist] {
         let path = dataFilePath()
         if let data = try?Data(contentsOf: path) {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-            var lists = unarchiver.decodeObject(forKey: "Checklists") as! [ChecklistItem]
+            var lists = unarchiver.decodeObject(forKey: "Checklists") as! [Checklist]
             return lists
         }
-        return []
+        return [Checklist]()
     }
     
-    public func saveChecklistItems(for lists:[ChecklistItem]) {
+    public func saveChecklistItems(for lists:[Checklist]) {
         let path = dataFilePath()
         let data = NSMutableData()
         var archiver = NSKeyedArchiver(forWritingWith: data)

@@ -1,19 +1,15 @@
 //
-//  ChecklistItem.swift
+//  Checklist.swift
 //  Checklist
 //
-//  Created by liufeismart on 2019/10/31.
+//  Created by liufeismart on 2019/11/1.
 //  Copyright © 2019 liufeismart. All rights reserved.
 //
 
 import Foundation
-class ChecklistItem: NSObject, NSCoding {
+class Checklist: NSObject, NSCoding {
     var name = ""
-    var checked = false
-    
-    override init() {
-        
-    }
+    var lists: [ChecklistItem] = [ChecklistItem]()
     
     init(name: String) {
         self.name = name
@@ -21,15 +17,11 @@ class ChecklistItem: NSObject, NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObject(forKey: "name") as! String
-        checked = aDecoder.decodeBool(forKey: "checked")
-        super.init()
+        lists = aDecoder.decodeObject(forKey: "lists") as! [ChecklistItem]
     }
     
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: "name")
-        aCoder.encode(checked, forKey: "checked")
+        aCoder.encode(lists, forKey: "lists")
     }
-    
-   
-    
 }
